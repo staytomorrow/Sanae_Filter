@@ -99,11 +99,11 @@ func (ac *AhoCorasick) Filter(text string) string {
 
 	if changes {
 		log.Printf("过滤后的文本：%s", string(runes))
-		return string(runes)
+		return string(runes)+ "\nresult:1"
 	}
 
 	log.Printf("文本未发生改变：%s", text)
-	return text
+	return text+ "\nresult:0"
 }
 
 func loadWordsIntoAC(ac *AhoCorasick, filename string) error {
